@@ -33,7 +33,7 @@ public class Main {
 
         String DateStringMinusMonth = minusMonth.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM));
 
-        String DateStringSevenDays = sevenDays.format(DateTimeFormatter.ofPattern("dd/MM/yyyy", Locale.ITALY));
+        String DateStringSevenDays = sevenDays.format(DateTimeFormatter.ofPattern("dd/MMMM/yyyy", Locale.ITALY));
 
         System.out.println("DateStringNextYear " + DateStringNextYear);
         System.out.println("DateStringMinusMonth " + DateStringMinusMonth);
