@@ -24,7 +24,30 @@ class MainTest {
         assertNotEquals(date1, date2, "Le due date non dovrebbero essere uguali");
 
     }
+    @Test
+    void testGetYear() {
+        // Creazione di un oggetto Instant
+        Instant date = Instant.parse("2023-03-01T13:00:00Z");
 
+        // Verifica che l'anno restituito sia corretto
+        assertEquals(2023, mainTest.getYear(date), "L'anno dovrebbe essere 2023");
+    }
 
+    @Test
+    void getMonth() {
+        Instant date = Instant.parse("2023-03-01T13:00:00Z");
+        assertEquals(3, mainTest.getMonth(date), "Il mese dovrebbe essere marzo (3)");
+    }
 
+    @Test
+    void getDay() {
+        Instant date = Instant.parse("2023-03-01T13:00:00Z");
+        assertEquals(1, mainTest.getDay(date), "Il giorno dovrebbe essere (1)");
+    }
+
+    @Test
+    void getDayofWeek() {
+        Instant date = Instant.parse("2023-03-01T13:00:00Z");
+        assertEquals(3, mainTest.getDayofWeek(date), "Il giorno della settimana dovrebbe essere (3)");
+    }
 }
